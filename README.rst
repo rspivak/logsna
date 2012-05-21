@@ -26,8 +26,7 @@ Or the bleeding edge version from the git master branch:
 How to use it
 -------------
 
-**logsna** provides custom formatter class *logsna.Formatter* that can
-  be used in a logging config file:
+**logsna** provides a custom formatter class *logsna.Formatter* that can be used in a logging config file:
 
 ::
 
@@ -135,7 +134,7 @@ The Log Format Goals
 
 1. To be human readable as much as possible
 
-2. Make it easy to use with standard Unix utilities *tail* and *grep*
+2. Make it easy to use with standard Unix utilities **tail** and **grep**
    to help quickly figure out why things are going south
 
 
@@ -146,21 +145,21 @@ The Log Format Notes
 
 2. To grep for messages of a specific level
 
-::
+    ::
 
-    $ tail -f sanefmt.log | grep '^INFO'
+        $ tail -f sanefmt.log | grep '^INFO'
 
 3. To grep for messages from a particular logger
 
-::
+    ::
 
-    $ tail -f sanefmt.log | grep 'component1:'
+        $ tail -f sanefmt.log | grep 'component1:'
 
 4. To pull out full exception tracebacks with a corresponding log message
 
-::
+    ::
 
-    $ tail -f sanefmt.log | grep -B 1 '^\!'
+        $ tail -f sanefmt.log | grep -B 1 '^\!'
 
 
 Acknowledgments
