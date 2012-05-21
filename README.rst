@@ -102,7 +102,6 @@ This is how to use it in code directly:
     log.debug('debug message')
     log.info('info message')
     log.warning('warning message')
-    log.error('error message')
     log.critical('critical message')
     try:
         1 / 0
