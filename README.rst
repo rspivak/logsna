@@ -9,6 +9,8 @@
 **logsna** is a small Python library that provides a sane log output
 format.
 
+`http://logsna.readthedocs.org <http://logsna.readthedocs.org>`_
+
 Installation
 ------------
 
