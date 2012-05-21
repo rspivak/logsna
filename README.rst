@@ -27,7 +27,7 @@ How to use it
 -------------
 
 **logsna** provides custom formatter class *logsna.Formatter* that can
-  be used in a file configuration:
+  be used in a logging config file:
 
 ::
 
@@ -69,6 +69,43 @@ How to use it
     log.debug('debug message')
     log.info('info message')
     log.warning('warning message')
+    log.critical('critical message')
+    try:
+        1 / 0
+    except:
+        log.exception('Houston we have a problem')
+
+
+This is how to use it in code directly:
+
+::
+
+    import logging
+
+    import logsna
+
+    # create logger
+    log = logging.getLogger('mylogger.component1')
+    log.setLevel(logging.DEBUG)
+
+    # create console handler and set level to debug
+    ch = logging.StreamHandler()
+    ch.setLevel(logging.DEBUG)
+
+    # create an instance of the sane formatter
+    formatter = logsna.Formatter()
+
+    # add our formatter to the console handler
+    ch.setFormatter(formatter)
+
+    # add the console handler to the logger
+    log.addHandler(ch)
+
+
+    log.debug('debug message')
+    log.info('info message')
+    log.warning('warning message')
+    log.error('error message')
     log.critical('critical message')
     try:
         1 / 0
