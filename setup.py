@@ -46,7 +46,7 @@ setup(
     version='1.0',
     url='https://github.com/rspivak/logsna',
     license='MIT',
-    descriptifon='A small Python library that provides a sane log output format',
+    description='A small Python library that provides a sane log output format',
     author='Ruslan Spivak',
     author_email='ruslan.spivak@gmail.com',
     packages=find_packages(),
