@@ -16,7 +16,7 @@ Installation
 
 ::
 
-    $ [sudo] pip install slimit
+    $ [sudo] pip install logsna
 
 Or the bleeding edge version from the git master branch:
 
