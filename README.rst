@@ -36,7 +36,6 @@ How to use it
     from StringIO import StringIO
 
     CONFIG = """\
-
     [loggers]
     keys=root
 
@@ -99,7 +98,6 @@ This is how to use it in code directly:
 
     # add the console handler to the logger
     log.addHandler(ch)
-
 
     log.debug('debug message')
     log.info('info message')
