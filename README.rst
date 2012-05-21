@@ -69,7 +69,6 @@ How to use it
     log.debug('debug message')
     log.info('info message')
     log.warning('warning message')
-    log.error('error message')
     log.critical('critical message')
     try:
         1 / 0
@@ -86,7 +85,6 @@ Here is an output from the above program:
     DEBUG    [2012-05-21 01:59:23,686] mylogger.component1: debug message
     INFO     [2012-05-21 01:59:23,686] mylogger.component1: info message
     WARNING  [2012-05-21 01:59:23,686] mylogger.component1: warning message
-    ERROR    [2012-05-21 01:59:23,686] mylogger.component1: error message
     CRITICAL [2012-05-21 01:59:23,686] mylogger.component1: critical message
     ERROR    [2012-05-21 01:59:23,686] mylogger.component1: Houston we have a problem
     ! Traceback (most recent call last):
@@ -115,13 +113,13 @@ The Log Format Notes
 
     $ tail -f sanefmt.log | grep '^INFO'
 
-3. To grep for messages with a particular logger
+3. To grep for messages from a particular logger
 
 ::
 
     $ tail -f sanefmt.log | grep 'component1:'
 
-4. To pull out exception traceback with log message
+4. To pull out full exception tracebacks with a corresponding log message
 
 ::
 
