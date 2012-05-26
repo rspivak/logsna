@@ -159,6 +159,10 @@ The Log Format Notes
     ::
 
         $ tail -f sanefmt.log | grep -B 1 '^\!'
+
+The output will look like this
+
+    ::
         ERROR    [2012-05-21 01:59:23,686] mylogger.component1: Houston we have a problem
         ! Traceback (most recent call last):
         !   File "fmttest.py", line 72, in <module>
