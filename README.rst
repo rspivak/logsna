@@ -160,7 +160,7 @@ The Log Format Notes
 
         $ tail -f sanefmt.log | grep -B 1 '^\!'
 
-The output of the above command will look like this
+    The output of the above command will look like this
 
     ::
 
