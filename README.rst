@@ -171,6 +171,29 @@ The Log Format Notes
         ! ZeroDivisionError: integer division or modulo by zero
 
 
+Enhancing The Log Format Output
+-------------------------------
+
+Here is the format string used by *Logsna* formatter:
+
+::
+
+    '%(levelname)-8s [%(asctime)s] %(name)s: %(message)s'
+
+You can explicitly specify it in your configuration file using **format**
+directive
+
+::
+
+    # Our custom formatter class
+    [formatter_sane]
+    format=%(levelname)-8s [%(asctime)s] %(name)s: %(message)s
+    class=logsna.Formatter
+
+And you can also enhance the format string by adding your custom
+attributes to it if you need to.
+For a set of predefined log record attributes see `here <http://docs.python.org/library/logging.html#logrecord-attributes>`_
+
 Acknowledgments
 ---------------
 
