@@ -43,7 +43,7 @@ def read(*rel_names):
 
 setup(
     name='logsna',
-    version='1.1',
+    version='1.2',
     url='https://github.com/rspivak/logsna',
     license='MIT',
     description='A small Python library that provides a sane log output format',
