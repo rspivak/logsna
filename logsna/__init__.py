@@ -33,14 +33,14 @@ _DEFAULT_FMT = '%(levelname)-8s [%(asctime)s] %(name)s: %(message)s'
 class Formatter(logging.Formatter):
 
     def __init__(self, fmt=None, datefmt=None):
-        super(Formatter, self).__init__(fmt or _DEFAULT_FMT, datefmt)
+        logging.Formatter.__init__(self, fmt or _DEFAULT_FMT, datefmt)
         # A user-configurable function to convert the creation time to a tuple.
         # It's used by Format.formatTime method and default is time.localtime()
         # We set it to convert time to a struct_time in UTC
         self.converter = time.gmtime
 
     def formatException(self, exc_info):
-        text = super(Formatter, self).formatException(exc_info)
+        text = logging.Formatter.formatException(self, exc_info)
         # Prepend ! mark to every line
         text = '\n'.join(('! %s' % line) for line in text.splitlines())
         return text
